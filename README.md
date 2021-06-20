@@ -52,5 +52,5 @@ Run `npm start` to start the dev server. Then navigate to `http://localhost:8080
 ## Transactions visible on Adyen customer area
 
 <p align="center">
-  <img src="checkout-challenge-images/6.png" width="500">
+  <img src="checkout-challenge-images/6.png" width="1200">
 </p>
