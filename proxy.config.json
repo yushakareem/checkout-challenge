@@ -1,0 +1,12 @@
+{
+    "/payments/*": {
+        "target":"https://checkout-test.adyen.com/v67",
+        "secure": false,
+        "logLevel": "debug"
+    },
+    "/paymentMethods/*": {
+        "target":"https://checkout-test.adyen.com/v67",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

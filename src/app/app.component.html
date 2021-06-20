@@ -1,0 +1,23 @@
+<app-top-bar></app-top-bar>
+
+<div id="card-payment">
+  <div id="card-container"></div>
+
+  <button [disabled]="!isCardReady()" id="test-button" (click)="payByCard()" class="pay-button">
+    <span class="pay-button-text">
+      <img src="https://checkoutshopper-test.adyen.com/checkoutshopper/images/components/lock.svg">
+        Pay €10 by Card
+    </span>
+  </button>
+</div>
+
+<div id="ideal-payment">
+  <div id="ideal-container"></div>
+
+  <button [disabled]="!isIDealReady()" id="iDeal-button" (click)="payWithIDeal()" class="pay-button">
+    <span class="pay-button-text">
+      <img src="https://checkoutshopper-test.adyen.com/checkoutshopper/images/components/lock.svg">
+        Pay €10 with iDeal
+    </span>
+  </button>
+</div>
