@@ -28,9 +28,9 @@ export class AppComponent {
     .set('X-API-Key', 'AQEyhmfxLI3MaBFLw0m/n3Q5qf3VaY9UCJ14XWZE03G/k2NFitRvbe4N1XqH1eHaH2AksaEQwV1bDb7kfNy1WIxIIkxgBw==-y3qzswmlmALhxaVPNjYf74bqPotG12HroatrKA066yE=-W+t7NF;s4}%=kUSD');
   }
 
-  ngOnInit() {
+  ngOnInit() {// on initialization of the checkout page
     this.router.events.pipe(take(1)).subscribe( (event: any) => {
-      if (event.url !== "/") {
+      if (event.url !== "/") {// after redirecting to checkout page with some results, check payment details and show to customer
         this.disablePay = true;
 
         const redirectResult = event.url.split('=')[1];
@@ -67,9 +67,9 @@ export class AppComponent {
       clientKey: "test_CIXAPNBW2JERLEJ6GYYC3WBLVMO2HIZ3"
     };
     const checkout = new AdyenCheckout(configuration);
-    this.customCard = checkout.create("card").mount('#card-container');
+    this.customCard = checkout.create("card").mount('#card-container');// create a card component in the UI by mounting on the card-container
 
-    const paymentMethodsBody = {
+    const paymentMethodsBody = {// need this body to get the local payment methods for NL
       "merchantAccount": "AdyenRecruitmentCOM",
       "countryCode": "NL",
       "shopperLocale": "nl-NL",
@@ -91,7 +91,7 @@ export class AppComponent {
           paymentMethodsResponse: response
         };
         const iDealCheckout = new AdyenCheckout(iDealConfig);
-        this.customIdeal = iDealCheckout.create('ideal').mount('#ideal-container');
+        this.customIdeal = iDealCheckout.create('ideal').mount('#ideal-container');// create an iDeal component in the UI by mounting on the iDeal-container
       }
     });
   }
@@ -221,7 +221,7 @@ export class AppComponent {
   }
 }
 
-@Component({
+@Component({// component for the final pop-up that shows the result of the transaction
   selector: 'dialog-payment',
   templateUrl: 'payment-dialog.html'
 })
