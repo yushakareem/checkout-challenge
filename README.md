@@ -2,10 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
 
-## 1. Install dependencies
+## Prerequisites
+- Install Node.js
+- Install Angular CLI
+
+## To run this project
+1. Install dependencies
 
 Run `npm i` to install all dependencies required to run the dev server.
 
-## 2. Development server
+2. Development server
 
-Run `npm start` for a dev server. Navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
+Run `npm start` to start the dev server. Then navigate to `http://localhost:8080/` in your browser.
